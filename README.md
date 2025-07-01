@@ -9,10 +9,10 @@ Built with **Python**, **Flask**, and **scikit-learn**, the app allows users to 
 ## 🚀 Demo Preview
 
 ### 🧾 Input Form
-<img src="form.PNG" alt="Input form" width="400"/>
+<img src="images/form.PNG" alt="Input form" width="400"/>
 
 ### 📈 Prediction Output
-<img src="tesult.PNG" alt="Prediction result" width="300"/>
+<img src="images/result.PNG" alt="Prediction result" width="300"/>
 
 ---
 
