@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🏠 Predict House Price</title>
+</head>
+<body>
+    <h2>Enter House Features</h2>
+    <form action="/predict" method="post">
+        <!-- MSSubClass was missing -->
+        <label>MSSubClass:</label><br>
+        <select name="MSSubClass" required>
+            <option value="20">1-STORY 1946 & NEWER ALL STYLES</option>
+            <option value="30">1-STORY 1945 & OLDER</option>
+            <option value="40">1-STORY W/FINISHED ATTIC ALL AGES</option>
+            <option value="45">1-1/2 STORY - UNFINISHED ALL AGES</option>
+            <option value="50">1-1/2 STORY FINISHED ALL AGES</option>
+            <option value="60">2-STORY 1946 & NEWER</option>
+            <option value="70">2-STORY 1945 & OLDER</option>
+            <option value="75">2-1/2 STORY ALL AGES</option>
+            <option value="80">SPLIT OR MULTI-LEVEL</option>
+            <option value="85">SPLIT FOYER</option>
+            <option value="90">DUPLEX</option>
+            <option value="120">1-STORY PUD (Planned Unit Development)</option>
+            <option value="150">1-1/2 STORY PUD</option>
+            <option value="160">2-STORY PUD</option>
+            <option value="180">PUD - MULTILEVEL</option>
+            <option value="190">2 FAMILY CONVERSION - ALL STYLES</option>
+        </select><br><br>
+
+        <!-- Numeric Inputs -->
+        <label>Overall Quality (1–10):</label><br>
+        <input type="number" name="OverallQual" min="1" max="10" step="1" required><br><br>
+
+        <label>GrLivArea (Above ground living area):</label><br>
+        <input type="number" name="GrLivArea" min="0" step="1" required><br><br>
+
+        <label>Garage Cars:</label><br>
+        <input type="number" name="GarageCars" min="0" step="1" required><br><br>
+
+        <label>Fireplaces:</label><br>
+        <input type="number" name="Fireplaces" min="0" step="1" required><br><br>
+
+        <label>TotalBsmtSF:</label><br>
+        <input type="number" name="TotalBsmtSF" min="0" step="1" required><br><br>
+
+        <label>Year Built:</label><br>
+        <input type="number" name="YearBuilt" min="1800" max="2024" step="1" required><br><br>
+
+        <!-- Categorical Inputs -->
+        <label>Central Air:</label><br>
+        <select name="CentralAir" required>
+            <option value="Y">Yes</option>
+            <option value="N">No</option>
+        </select><br><br>
+
+        <label>ExterQual:</label><br>
+        <select name="ExterQual" required>
+            <option value="Ex">Excellent</option>
+            <option value="Gd">Good</option>
+            <option value="TA">Typical/Average</option>
+            <option value="Fa">Fair</option>
+            <option value="Po">Poor</option>
+        </select><br><br>
+
+        <label>MSZoning:</label><br>
+        <select name="MSZoning" required>
+            <option value="RL">Residential Low Density</option>
+            <option value="RM">Residential Medium Density</option>
+            <option value="FV">Floating Village</option>
+            <option value="RH">Residential High Density</option>
+            <option value="C (all)">Commercial</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict SalePrice">
+    </form>
+</body>
+</html>

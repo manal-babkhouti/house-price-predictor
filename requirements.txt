@@ -1,0 +1,17 @@
+# Core
+pandas
+numpy
+
+# Visualization
+matplotlib
+seaborn
+missingno
+
+# Machine Learning
+scikit-learn
+xgboost
+joblib
+
+# Web App
+Flask
+Jinja2
