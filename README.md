@@ -122,11 +122,10 @@ house-price-predictor/
 │   ├── form.PNG
 │   └── result.PNG
 │
-├── models/                      # Trained model files
-│   ├── model.pkl
-│   └── xgb_best_pipeline.pkl
-│
-└──  notebooks/                   # (Empty or for future notebooks)
+└── models/                      # Trained model files
+    ├── model.pkl
+    └── xgb_best_pipeline.pkl
+                
 
 ```
 
