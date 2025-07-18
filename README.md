@@ -1,12 +1,12 @@
 # 🏡 House Price Predictor
 
-This project is a complete end-to-end machine learning pipeline for predicting house prices based on property features — from exploratory data analysis to a real-time web application.
+A complete end-to-end machine learning project to **predict house prices** based on property features — from exploratory data analysis to a real-time **Flask web app**.
 
-Built with **Python**, **Flask**, and **scikit-learn**, the app allows users to input housing details through a friendly interface and instantly receive a price prediction.
+Users can input details like square footage, garage size, and year built, and instantly receive a **predicted sale price** based on trained regression models.
 
 ---
 
-## 🚀 Demo Preview
+## 🚀 Live App Preview
 
 ### 🧾 Input Form
 <img src="images/form.PNG" alt="Input form" width="400"/>
@@ -16,125 +16,137 @@ Built with **Python**, **Flask**, and **scikit-learn**, the app allows users to 
 
 ---
 
-## 🧠 Project Purpose
+## 🎯 Project Highlights
 
-This project was developed as part of my learning journey to:
-- 🔍 Practice real-world data analysis (EDA)
-- 🤖 Apply and compare regression models
-- 🌐 Build a user-facing ML application with Flask
-- 💡 Stay motivated by turning notebooks into working tools
-
+✅ Turned a Jupyter notebook into a working tool  
+✅ Trained and evaluated multiple regression models  
+✅ Built a user-friendly web interface with Flask  
+✅ Containerized the app with Docker for easy deployment
 
 ---
 
-## 🧱 Full Tech Stack
+## 🧱 Tech Stack Overview
 
-### 🖥️ Backend
-- **Python** – Core programming language  
-- **Flask** – Web framework for routing and rendering  
-- **joblib** – Load the trained model (`model.pkl`)  
-- **pandas** – Prepare and format input features
+### ⚙️ Backend
+- **Python** – Main programming language
+- **Flask** – Lightweight web framework for routing and templates
+- **joblib** – Load serialized models for prediction
+- **pandas** – Input feature formatting and processing
 
-### 🤖 Machine Learning
-- **scikit-learn** – For:
-  - Training: **Linear**, **Ridge**, **Lasso**
-  - Evaluation & preprocessing  
-- **xgboost** – For **XGBoost Regressor**
-- **joblib** – For saving and loading the trained model
+### 🧠 Machine Learning
+- **scikit-learn** – Linear, Ridge, and Lasso regression models
+- **XGBoost** – High-performance gradient boosting
+- **joblib** – Model saving/loading
 
-### 📊 Data Analysis & Preprocessing
-- **pandas**, **numpy**, **missingno** – Cleaning and null analysis  
-- **matplotlib**, **seaborn** – Visualizations and plots
+### 📊 Data & EDA
+- **pandas**, **numpy** – Data manipulation
+- **seaborn**, **matplotlib** – Visualizations
+- **missingno** – Missing value analysis
 
-### 🎨 Frontend
-- **HTML5 + CSS3** – Form and output pages  
-- **Jinja2** – HTML rendering via Flask  
-- **Emoji icons** – User-friendly form elements
+### 🌐 Frontend
+- **HTML5 & CSS3** – UI design
+- **Jinja2** – Templating engine for dynamic pages
 
 ---
 
-## ⚙️ How to Run Locally
+## ⚙️ Run the App Locally
 
-### 1. Clone the repository
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/manal-babkhouti/house-price-predictor.git
+   cd house-price-predictor
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Flask app**
+   ```bash
+   python app.py
+   ```
+
+4. **Access the app**
+   ```
+   http://localhost:5000
+   ```
+
+---
+
+## 📦 Docker Setup (Optional)
+
+To run the app inside Docker:
+
 ```bash
-git clone https://github.com/your-username/house-price-predictor.git
-cd house-price-predictor
-```
-
-### 2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run the Flask app
-```bash
-python app.py
-```
-
-### 4. Open in your browser
-```
-http://localhost:5000
+docker build -t house-price-app .
+docker run -p 5000:5000 house-price-app
 ```
 
 ---
 
-## 🧪 Model Overview
+## 🤖 Model Performance & Evaluation
 
-This project compares and evaluates multiple regression models:
+The following models were trained and compared:
+
 - Linear Regression  
 - Ridge Regression  
 - Lasso Regression  
 - XGBoost Regressor  
 
-✅ The best-performing model was saved as `model.pkl` and is used in the live app.
+**Evaluation Metrics:**
 
----
-
-## 📌 Evaluation Metrics
 - R² Score  
 - Mean Squared Error (MSE)  
-- Actual vs. Predicted plots  
+- Actual vs. Predicted plots
 
-📎 _Note: `SalePrice` was log-transformed during training for better model accuracy._
+📌 _Note: The target variable `SalePrice` was log-transformed to improve performance._
+
+✅ The best-performing model was saved as `model.pkl` and integrated into the live app.
 
 ---
 
-## 📂 Project Structure
-```
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```text
 house-price-predictor/
 │
-├── app.py                       # Flask web application
-├── form.html                    # HTML file 
-├── Dockerfile                   # Docker setup for containerization
-├── requirements.txt             # Project dependencies
-├── README.md                    # Project documentation
+├── app.py                   # Flask app entrypoint
+├── templates/
+│   └── form.html            # User input HTML form
 │
-├── EDA_to_model.ipynb           # Main notebook: EDA and model training
+├── Dockerfile               # Container setup
+├── requirements.txt         # Python dependencies
+├── README.md                # Project documentation
 │
-├── data/                        # Raw dataset files
-│   ├── train.csv
-│   └── test.csv
+├── EDA_to_model.ipynb       # Notebook: EDA + model training
 │
-├── images/                      # UI screenshots for README
-│   ├── form.PNG
-│   └── result.PNG
+├── data/
+│   ├── train.csv            # Raw training data
+│   └── test.csv             # Raw test data
 │
-└── models/                      # Trained model files
-    ├── model.pkl
+├── images/
+│   ├── form.PNG             # Screenshot: input form
+│   └── result.PNG           # Screenshot: result page
+│
+└── models/
+    ├── model.pkl            # Final saved model
     └── xgb_best_pipeline.pkl
-                
-
 ```
 
 ---
 
-## 👩‍💻 Author
+## 👩‍💻 About Me
 
 **Manal Babkhouti**  
-Engineering Student | Learning ML & Data Apps  
-🛠️ Turning code into real tools, one project at a time.
+Engineering Student | Data & AI Enthusiast  
+Building real-world ML tools while learning — one project at a time.
 
+🔗 [LinkedIn](https://www.linkedin.com/in/manal-babkhouti/) | [GitHub](https://github.com/manal-babkhouti)
 
+---
+
+## 📘 Read the Full Report
+
+👉 The complete analysis, from EDA to model selection, is detailed in the notebook below:  
+📄 [View EDA_to_model.ipynb on GitHub](https://github.com/manal-babkhouti/house-price-predictor/blob/main/EDA_to_model.ipynb)
